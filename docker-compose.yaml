@@ -1,10 +1,12 @@
-mosquitto:
-  container_name: mosquitto
-  image: eclipse-mosquitto
-  volumes:
-    - "/srv/mosquitto/config:/mosquitto/config"
-    - "/srv/mosquitto/log:/mosquitto/log"
-    - "/srv/mosquitto/data/:/mosquitto/data"
-  restart: always
-  ports:
-    - "1883:1883"
+version: "3"
+services:
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto
+    volumes:
+      - "/srv/mosquitto/config:/mosquitto/config"
+      - "/srv/mosquitto/log:/mosquitto/log"
+      - "/srv/mosquitto/data/:/mosquitto/data"
+    restart: always
+    ports:
+      - "1883:1883"
